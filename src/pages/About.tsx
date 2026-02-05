@@ -117,20 +117,15 @@ const About = () => {
             </h2>
           </div>
 
-          {/* Masonry-style Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Uniform Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {galleryItems.map((item, index) => (
               <div
                 key={item.title}
-                className={`gallery-item group ${
-                  item.size === "tall" ? "sm:row-span-2" : ""
-                } ${item.size === "wide" ? "sm:col-span-2 lg:col-span-1" : ""}`}
+                className="gallery-item group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`${
-                  item.size === "tall" ? "aspect-[3/5]" : 
-                  item.size === "wide" ? "aspect-[16/10]" : "aspect-square"
-                } overflow-hidden rounded-xl`}>
+                <div className="aspect-[4/5] overflow-hidden rounded-xl border border-border/50">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -140,7 +135,7 @@ const About = () => {
                 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className="bg-background/90 backdrop-blur-sm rounded-lg p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="bg-card/95 backdrop-blur-sm rounded-lg p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 border border-primary/20">
                     <h3 className="font-display text-lg font-medium text-foreground">
                       {item.title}
                     </h3>

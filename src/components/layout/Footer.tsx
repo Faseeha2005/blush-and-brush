@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="font-display text-xl font-semibold text-foreground">
-              Aria <span className="text-primary">Studio</span>
+              Artistry <span className="text-primary">Studio</span>
             </h3>
             <p className="text-sm text-muted-foreground max-w-xs">
               Turning imagination into stunning visual art. Custom illustrations, 
@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Aria Studio. All rights reserved.
+            © {new Date().getFullYear()} Artistry Studio. All rights reserved.
           </p>
         </div>
       </div>
