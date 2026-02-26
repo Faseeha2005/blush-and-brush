@@ -5,68 +5,68 @@
 @tailwind utilities;
 
 /* Artist Portfolio Design System
-   Colors: Soft Cream Blush, Warm Light Taupe, Dusty Rose
+   Light Mode: Soft Cream, Warm Taupe, Dusty Rose
    All colors in HSL format
 */
 
 @layer base {
   :root {
-    /* Deep Burgundy Background */
-    --background: 350 30% 8%;
-    --foreground: 350 15% 92%;
+    /* Soft Cream Background #F9F6F2 */
+    --background: 33 33% 96%;
+    --foreground: 20 15% 18%;
 
-    /* Card surfaces - slightly lighter burgundy */
-    --card: 350 25% 12%;
-    --card-foreground: 350 15% 92%;
+    /* Card surfaces - white with warmth */
+    --card: 30 30% 98%;
+    --card-foreground: 20 15% 18%;
 
-    --popover: 350 25% 12%;
-    --popover-foreground: 350 15% 92%;
+    --popover: 30 30% 98%;
+    --popover-foreground: 20 15% 18%;
 
-    /* Rich Burgundy - Primary accent */
-    --primary: 350 80% 35%;
-    --primary-foreground: 350 10% 95%;
+    /* Dusty Rose - Primary accent #D6A6A1 */
+    --primary: 5 38% 74%;
+    --primary-foreground: 30 30% 98%;
 
-    /* Soft Rose - Secondary */
-    --secondary: 0 25% 65%;
-    --secondary-foreground: 350 30% 10%;
+    /* Warm Taupe - Secondary #D8C4B6 */
+    --secondary: 25 28% 78%;
+    --secondary-foreground: 20 15% 18%;
 
     /* Muted tones */
-    --muted: 350 20% 16%;
-    --muted-foreground: 350 15% 60%;
+    --muted: 30 20% 92%;
+    --muted-foreground: 20 10% 45%;
 
-    /* Accent - Dusty Rose */
-    --accent: 0 30% 55%;
-    --accent-foreground: 350 10% 95%;
+    /* Accent - deeper dusty rose */
+    --accent: 5 30% 68%;
+    --accent-foreground: 30 30% 98%;
 
-    --destructive: 0 60% 45%;
-    --destructive-foreground: 350 10% 95%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 30 30% 98%;
 
     /* Warm borders */
-    --border: 350 20% 20%;
-    --input: 350 20% 20%;
-    --ring: 350 80% 35%;
+    --border: 25 20% 88%;
+    --input: 25 20% 88%;
+    --ring: 5 38% 74%;
 
     --radius: 0.5rem;
 
     /* Custom gradient tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(350 30% 8%) 0%, hsl(350 25% 12%) 50%, hsl(350 20% 15%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(350 80% 35%) 0%, hsl(0 30% 55%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(350 25% 12%) 0%, hsl(350 28% 10%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(33 33% 96%) 0%, hsl(30 30% 94%) 50%, hsl(25 28% 92%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(5 38% 74%) 0%, hsl(5 30% 68%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(30 30% 98%) 0%, hsl(33 33% 96%) 100%);
 
     /* Shadow tokens */
-    --shadow-soft: 0 4px 20px -4px hsl(350 30% 5% / 0.4);
-    --shadow-card: 0 8px 30px -8px hsl(350 30% 5% / 0.5);
-    --shadow-elevated: 0 20px 50px -15px hsl(350 30% 5% / 0.6);
+    --shadow-soft: 0 4px 20px -4px hsl(20 15% 18% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(20 15% 18% / 0.08);
+    --shadow-elevated: 0 20px 50px -15px hsl(20 15% 18% / 0.12);
 
     /* Sidebar */
-    --sidebar-background: 350 25% 12%;
-    --sidebar-foreground: 350 15% 92%;
-    --sidebar-primary: 350 80% 35%;
-    --sidebar-primary-foreground: 350 10% 95%;
-    --sidebar-accent: 350 20% 18%;
-    --sidebar-accent-foreground: 350 15% 92%;
-    --sidebar-border: 350 20% 20%;
-    --sidebar-ring: 350 80% 35%;
+    --sidebar-background: 30 30% 98%;
+    --sidebar-foreground: 20 15% 18%;
+    --sidebar-primary: 5 38% 74%;
+    --sidebar-primary-foreground: 30 30% 98%;
+    --sidebar-accent: 25 28% 90%;
+    --sidebar-accent-foreground: 20 15% 18%;
+    --sidebar-border: 25 20% 88%;
+    --sidebar-ring: 5 38% 74%;
   }
 }
 
@@ -121,7 +121,7 @@
 
   .gallery-item::after {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent opacity-0 transition-opacity duration-300;
   }
 
   .gallery-item:hover::after {

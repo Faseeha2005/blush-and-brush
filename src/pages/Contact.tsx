@@ -95,7 +95,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-medium text-foreground">Email Me</h4>
                       <p className="text-sm text-muted-foreground">
-                        hello@ariastudio.com
+                        hello@artistrystudio.com
                       </p>
                     </div>
                   </div>

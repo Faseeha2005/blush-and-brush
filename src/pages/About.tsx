@@ -7,42 +7,12 @@ import animal from "@/assets/gallery/animal-1.jpg";
 import abstract from "@/assets/gallery/abstract-1.jpg";
 
 const galleryItems = [
-  { 
-    image: stillLife, 
-    title: "Cozy Moments", 
-    description: "A warm still life capturing the essence of quiet moments",
-    size: "tall" 
-  },
-  { 
-    image: landscape, 
-    title: "Misty Forest", 
-    description: "Dreamlike landscape with ethereal atmosphere",
-    size: "wide" 
-  },
-  { 
-    image: botanical, 
-    title: "Rose Garden", 
-    description: "Delicate botanical illustration with soft colors",
-    size: "normal" 
-  },
-  { 
-    image: character, 
-    title: "The Wanderer", 
-    description: "Fantasy character design with magical elements",
-    size: "tall" 
-  },
-  { 
-    image: animal, 
-    title: "Whiskers", 
-    description: "Whimsical character illustration",
-    size: "normal" 
-  },
-  { 
-    image: abstract, 
-    title: "Cloud Dreams", 
-    description: "Abstract atmospheric piece with gentle gradients",
-    size: "wide" 
-  },
+  { image: stillLife, title: "Cozy Moments", description: "A warm still life capturing the essence of quiet moments" },
+  { image: landscape, title: "Misty Forest", description: "Dreamlike landscape with ethereal atmosphere" },
+  { image: botanical, title: "Rose Garden", description: "Delicate botanical illustration with soft colors" },
+  { image: character, title: "The Wanderer", description: "Fantasy character design with magical elements" },
+  { image: animal, title: "Whiskers", description: "Whimsical character illustration" },
+  { image: abstract, title: "Cloud Dreams", description: "Abstract atmospheric piece with gentle gradients" },
 ];
 
 const About = () => {
@@ -76,7 +46,7 @@ const About = () => {
                   About the Artist
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hello! I'm Aria, a passionate artist dedicated to bringing imagination 
+                  Hello! I'm Faseeha, a passionate artist dedicated to bringing imagination 
                   to life through illustrations and digital art. With over 5 years of 
                   experience, I specialize in creating unique, emotionally resonant artwork.
                 </p>
@@ -117,7 +87,7 @@ const About = () => {
             </h2>
           </div>
 
-          {/* Uniform Grid Layout */}
+          {/* Clean uniform grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {galleryItems.map((item, index) => (
               <div
@@ -125,7 +95,7 @@ const About = () => {
                 className="gallery-item group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-[4/5] overflow-hidden rounded-xl border border-border/50">
+                <div className="aspect-[4/5] overflow-hidden rounded-xl border border-border">
                   <img
                     src={item.image}
                     alt={item.title}
