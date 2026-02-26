@@ -5,13 +5,14 @@ export function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Main footer content - flexbox horizontal on desktop, stacked on mobile */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:max-w-xs">
             <h3 className="font-display text-xl font-semibold text-foreground">
               Artistry <span className="text-primary">Studio</span>
             </h3>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-sm text-muted-foreground">
               Turning imagination into stunning visual art. Custom illustrations, 
               portraits, and digital artwork crafted with passion.
             </p>
@@ -55,7 +56,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@ariastudio.com"
+                href="mailto:hello@artistrystudio.com"
                 className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 aria-label="Email"
               >
@@ -63,7 +64,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              hello@ariastudio.com
+              hello@artistrystudio.com
             </p>
           </div>
         </div>
