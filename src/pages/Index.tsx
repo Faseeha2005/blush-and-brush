@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Palette, Sparkles, Heart } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 import stillLife from "@/assets/gallery/portrait-1.jpg";
 import landscape from "@/assets/gallery/landscape-1.jpg";
 import botanical from "@/assets/gallery/botanical-1.jpg";
@@ -16,22 +15,17 @@ const featuredWorks = [
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroBg}
-            alt="Artistic background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
-        </div>
+      {/* Hero Section - Solid/Gradient, no background image */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-hero-gradient">
+        {/* Decorative shapes */}
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/5 blur-3xl" />
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto space-y-6 animate-fade-in">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/15 text-accent text-sm font-medium">
               Welcome to My Studio
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-tight">
@@ -130,7 +124,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-2xl bg-card shadow-soft hover:shadow-card transition-shadow duration-300">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/15 flex items-center justify-center">
                 <Palette className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-medium text-foreground mb-3">
@@ -143,7 +137,7 @@ const Index = () => {
             </div>
 
             <div className="text-center p-8 rounded-2xl bg-card shadow-soft hover:shadow-card transition-shadow duration-300">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/15 flex items-center justify-center">
                 <Sparkles className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-medium text-foreground mb-3">
@@ -156,7 +150,7 @@ const Index = () => {
             </div>
 
             <div className="text-center p-8 rounded-2xl bg-card shadow-soft hover:shadow-card transition-shadow duration-300">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/15 flex items-center justify-center">
                 <Heart className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-medium text-foreground mb-3">
@@ -172,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-hero-gradient">
+      <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-6">
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground">
