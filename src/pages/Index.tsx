@@ -7,39 +7,37 @@ import landscape from "@/assets/gallery/landscape-1.jpg";
 import botanical from "@/assets/gallery/botanical-1.jpg";
 
 const featuredWorks = [
-  { image: stillLife, title: "Cozy Moments", category: "Still Life" },
-  { image: landscape, title: "Misty Forest", category: "Landscape" },
-  { image: botanical, title: "Rose Garden", category: "Botanical" },
+  { image: stillLife, title: "Cozy Moments", category: "Still Life", alt: "Watercolor still life painting of teacup with pink flowers on vintage books" },
+  { image: landscape, title: "Misty Forest", category: "Landscape", alt: "Soft watercolor landscape of misty hills at dawn in dusty rose tones" },
+  { image: botanical, title: "Rose Garden", category: "Botanical", alt: "Delicate watercolor painting of pink roses with cream background" },
 ];
 
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section - Solid/Gradient, no background image */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-hero-gradient">
-        {/* Decorative shapes */}
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/5 blur-3xl" />
 
-        {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto space-y-6 animate-fade-in">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/15 text-accent text-sm font-medium">
-              Welcome to My Studio
+              Welcome to Blush & Brush
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-tight">
               Turning Ideas Into{" "}
               <span className="text-primary italic">Art</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto">
-              Custom illustrations, portraits, and digital artwork crafted with 
+              Custom illustrations, paintings, and digital artwork crafted with 
               passion and attention to every detail.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button asChild size="lg" className="btn-animate">
                 <Link to="/contact">
-                  Commission Me
+                  Get in Touch
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -50,7 +48,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Decorative scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
             <div className="w-1 h-3 bg-muted-foreground/50 rounded-full" />
@@ -58,7 +55,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Work Section */}
+      {/* Featured Work */}
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 space-y-4">
@@ -69,7 +66,8 @@ const Index = () => {
               Recent Creations
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto">
-              A glimpse into my artistic journey and the stories I love to tell through art.
+              A glimpse into my artistic journey. Explore more in the{" "}
+              <Link to="/about" className="text-primary hover:underline">full portfolio</Link>.
             </p>
           </div>
 
@@ -83,7 +81,8 @@ const Index = () => {
                 <div className="aspect-[4/5] overflow-hidden rounded-lg">
                   <img
                     src={work.image}
-                    alt={work.title}
+                    alt={work.alt}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
@@ -110,7 +109,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Me Section */}
+      {/* Why Choose Me */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 space-y-4">
@@ -165,7 +164,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-6">
@@ -176,12 +175,19 @@ const Index = () => {
               Let's collaborate and bring your vision to life. Every great artwork 
               starts with a conversation.
             </p>
-            <Button asChild size="lg" className="btn-animate">
-              <Link to="/contact">
-                Start Your Commission
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="btn-animate">
+                <Link to="/contact">
+                  Get in Touch
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/services">
+                  Explore Services
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

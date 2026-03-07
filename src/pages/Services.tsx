@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Brush, User, Monitor, Wand2 } from "lucide-react";
+import { ArrowRight, Brush, Flower2, Monitor, Wand2 } from "lucide-react";
 
 const services = [
   {
@@ -17,15 +17,15 @@ const services = [
     ],
   },
   {
-    icon: User,
-    title: "Portrait Drawings",
+    icon: Flower2,
+    title: "Botanical & Still Life",
     description:
-      "Capture the essence of your loved ones with beautifully detailed portraits. From realistic to stylized, I bring personalities to life on canvas.",
+      "Delicate botanical paintings and still life compositions with soft watercolor aesthetics. Ideal for home décor, prints, and gifts.",
     features: [
-      "Digital or traditional medium",
-      "Family & couple portraits",
-      "Pet portraits available",
-      "Various style options",
+      "Watercolor or digital medium",
+      "Custom flower arrangements",
+      "Print-ready formats",
+      "Various size options",
     ],
   },
   {
@@ -42,13 +42,13 @@ const services = [
   },
   {
     icon: Wand2,
-    title: "Character & Concept Art",
+    title: "Concept & Fantasy Art",
     description:
-      "Bring your characters and worlds to life with detailed concept art. Ideal for game developers, authors, and creative projects seeking unique designs.",
+      "Bring imaginative worlds and scenes to life with detailed concept art. Ideal for authors, game developers, and creative projects seeking unique designs.",
     features: [
-      "Full character sheets",
+      "Full scene compositions",
       "Environment concepts",
-      "Turnaround views",
+      "Mood and atmosphere studies",
       "Style exploration",
     ],
   },
@@ -57,7 +57,6 @@ const services = [
 const Services = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="py-20 bg-hero-gradient">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -68,14 +67,13 @@ const Services = () => {
               What I Create
             </h1>
             <p className="text-lg text-muted-foreground">
-              From custom illustrations to detailed character designs, I offer a range 
-              of artistic services tailored to bring your vision to life.
+              From custom illustrations to detailed fantasy art, I offer a range 
+              of artistic services. View my <Link to="/about" className="text-primary hover:underline">portfolio</Link> to see past work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -109,7 +107,7 @@ const Services = () => {
                     </ul>
                     <Button asChild variant="outline" className="mt-4">
                       <Link to="/contact">
-                        Request This Service
+                        Inquire About This
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
@@ -121,7 +119,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process */}
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 space-y-4">
@@ -151,8 +149,6 @@ const Services = () => {
                     {item.title}
                   </h4>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
-                  
-                  {/* Connector Line */}
                   {index < 3 && (
                     <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-border" />
                   )}
@@ -163,7 +159,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-6">

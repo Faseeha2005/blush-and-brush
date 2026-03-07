@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,10 +17,10 @@ import { useToast } from "@/hooks/use-toast";
 
 const artworkTypes = [
   "Custom Illustration",
-  "Portrait Drawing",
+  "Botanical Painting",
+  "Landscape Art",
   "Digital Art",
-  "Character Design",
-  "Concept Art",
+  "Abstract Piece",
   "Other",
 ];
 
@@ -36,22 +37,17 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     toast({
       title: "Message Sent! ✨",
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
-
     setFormData({ name: "", email: "", artworkType: "", message: "" });
     setIsSubmitting(false);
   };
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="py-20 bg-hero-gradient">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -69,21 +65,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-              {/* Contact Info */}
               <div className="lg:col-span-2 space-y-8">
                 <div>
                   <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
-                    Ready to Commission?
+                    Let's Work Together
                   </h2>
                   <p className="text-muted-foreground">
                     Whether you have a clear vision or just a spark of an idea, 
-                    I'm here to help bring it to life. Every collaboration starts 
-                    with a conversation.
+                    I'm here to help bring it to life. Browse my{" "}
+                    <Link to="/about" className="text-primary hover:underline">portfolio</Link> or explore{" "}
+                    <Link to="/services" className="text-primary hover:underline">services</Link> to learn more.
                   </p>
                 </div>
 
@@ -95,7 +90,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-medium text-foreground">Email Me</h4>
                       <p className="text-sm text-muted-foreground">
-                        hello@artistrystudio.com
+                        hello@blushandbrush.com
                       </p>
                     </div>
                   </div>
@@ -119,20 +114,13 @@ const Contact = () => {
                     <div>
                       <h4 className="font-medium text-foreground">Open for</h4>
                       <p className="text-sm text-muted-foreground">
-                        Commissions & Collaborations
+                        Custom artwork & collaborations
                       </p>
                     </div>
                   </div>
                 </div>
-
-                {/* Decorative Element */}
-                <div className="hidden lg:block relative mt-8">
-                  <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl" />
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-accent/10 rounded-full blur-xl" />
-                </div>
               </div>
 
-              {/* Contact Form */}
               <div className="lg:col-span-3">
                 <form
                   onSubmit={handleSubmit}
