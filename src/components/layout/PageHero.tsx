@@ -14,7 +14,7 @@ interface PageHeroProps {
 
 export function PageHero({ label, title, titleAccent, description, image, imageAlt }: PageHeroProps) {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-hero-gradient">
+    <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-hero-gradient">
       {/* Animated floating blobs */}
       <motion.div
         className="absolute top-[5%] right-[5%] w-80 h-80 rounded-full bg-primary/8 blur-3xl"
