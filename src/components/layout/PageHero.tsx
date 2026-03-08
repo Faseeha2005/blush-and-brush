@@ -14,7 +14,7 @@ interface PageHeroProps {
 
 export function PageHero({ label, title, titleAccent, description, image, imageAlt }: PageHeroProps) {
   return (
-    <section className="relative py-8 md:py-10 lg:py-12 overflow-hidden bg-hero-gradient">
+    <section className="relative py-6 md:py-8 lg:py-10 overflow-hidden bg-hero-gradient">
       {/* Animated floating blobs */}
       <motion.div
         className="absolute top-[5%] right-[5%] w-80 h-80 rounded-full bg-primary/8 blur-3xl"
@@ -211,11 +211,11 @@ export function PageHero({ label, title, titleAccent, description, image, imageA
               initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative hidden lg:block"
+              className="relative hidden lg:flex items-center justify-center"
             >
-              <div className="relative">
+              <div className="relative max-w-[280px]">
                 <motion.div
-                  className="aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated border border-border/50"
+                  className="aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated border border-border/50"
                   whileHover={{ scale: 1.02, rotate: -1 }}
                   transition={{ duration: 0.4 }}
                 >
