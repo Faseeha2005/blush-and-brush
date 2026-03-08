@@ -183,7 +183,7 @@ export function PageHero({ label, title, titleAccent, description }: PageHeroPro
             )}
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground/90 max-w-2xl mx-auto leading-relaxed font-light tracking-wide italic">
             {description}
           </p>
         </AnimatedSection>

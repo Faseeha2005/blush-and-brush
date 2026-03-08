@@ -41,7 +41,7 @@ const Services = () => {
           label="Services"
           title="What I"
           titleAccent="Create"
-          description={<>From custom illustrations to detailed fantasy art, I offer a range of artistic services. View my <Link to="/about" className="text-primary hover:underline">portfolio</Link> to see past work.</>}
+          description={<>Bespoke artistry tailored to your vision — from ethereal illustrations to richly detailed fantasy worlds. Explore my <Link to="/about" className="text-primary hover:underline font-medium">portfolio</Link> for inspiration.</>}
         />
 
         <section className="py-24 bg-background">
