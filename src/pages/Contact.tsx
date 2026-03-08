@@ -16,6 +16,7 @@ import { Mail, MessageSquare, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { AnimatedSection, PageTransition } from "@/components/animations/AnimatedSection";
+import { PageHero } from "@/components/layout/PageHero";
 
 const artworkTypes = [
   "Custom Illustration",
@@ -57,22 +58,12 @@ const Contact = () => {
   return (
     <Layout>
       <PageTransition>
-        <section className="py-20 bg-hero-gradient">
-          <div className="container mx-auto px-4 lg:px-8">
-            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-6">
-              <span className="text-primary text-sm font-medium uppercase tracking-wider">
-                Get in Touch
-              </span>
-              <h1 className="font-display text-5xl md:text-6xl font-semibold text-foreground">
-                Let's Create Together
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Have a project in mind? I'd love to hear from you. Fill out the form
-                below and let's start bringing your vision to life.
-              </p>
-            </AnimatedSection>
-          </div>
-        </section>
+        <PageHero
+          label="Get in Touch"
+          title="Let's Create"
+          titleAccent="Together"
+          description="Have a project in mind? I'd love to hear from you. Fill out the form below and let's start bringing your vision to life."
+        />
 
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Brush, Flower2, Monitor, Wand2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection, StaggerContainer, StaggerItem, PageTransition } from "@/components/animations/AnimatedSection";
+import { PageHero } from "@/components/layout/PageHero";
 
 const services = [
   {
@@ -36,22 +37,12 @@ const Services = () => {
   return (
     <Layout>
       <PageTransition>
-        <section className="py-20 bg-hero-gradient">
-          <div className="container mx-auto px-4 lg:px-8">
-            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-6">
-              <span className="text-primary text-sm font-medium uppercase tracking-wider">
-                Services
-              </span>
-              <h1 className="font-display text-5xl md:text-6xl font-semibold text-foreground">
-                What I Create
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                From custom illustrations to detailed fantasy art, I offer a range
-                of artistic services. View my <Link to="/about" className="text-primary hover:underline">portfolio</Link> to see past work.
-              </p>
-            </AnimatedSection>
-          </div>
-        </section>
+        <PageHero
+          label="Services"
+          title="What I"
+          titleAccent="Create"
+          description={<>From custom illustrations to detailed fantasy art, I offer a range of artistic services. View my <Link to="/about" className="text-primary hover:underline">portfolio</Link> to see past work.</>}
+        />
 
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
