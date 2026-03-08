@@ -98,10 +98,6 @@ const Index = () => {
                 <div className="absolute top-[15%] right-[5%] w-[50%] aspect-[3/4] rounded-2xl overflow-hidden shadow-card rotate-[5deg] hover:rotate-0 transition-transform duration-500 z-10">
                   <img src={botanical} alt="Delicate watercolor botanical painting" className="w-full h-full object-cover" />
                 </div>
-                {/* Third image */}
-                <div className="absolute bottom-[5%] left-[20%] w-[45%] aspect-[4/3] rounded-2xl overflow-hidden shadow-card rotate-[2deg] hover:rotate-0 transition-transform duration-500 z-30">
-                  <img src={landscape} alt="Soft watercolor landscape" className="w-full h-full object-cover" />
-                </div>
                 {/* Decorative circle */}
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center z-40">
                   <Palette className="w-10 h-10 text-primary" />
