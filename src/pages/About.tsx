@@ -25,23 +25,12 @@ const About = () => {
   return (
     <Layout>
       <PageTransition>
-        {/* Hero */}
-        <section className="py-20 bg-hero-gradient">
-          <div className="container mx-auto px-4 lg:px-8">
-            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-6">
-              <span className="text-primary text-sm font-medium uppercase tracking-wider">
-                Portfolio
-              </span>
-              <h1 className="font-display text-5xl md:text-6xl font-semibold text-foreground">
-                My Artistic Journey
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                A collection of dreams, stories, and emotions captured through art.
-                Each piece tells a unique story waiting to be discovered.
-              </p>
-            </AnimatedSection>
-          </div>
-        </section>
+        <PageHero
+          label="Portfolio"
+          title="My Artistic"
+          titleAccent="Journey"
+          description="A collection of dreams, stories, and emotions captured through art. Each piece tells a unique story waiting to be discovered."
+        />
 
         {/* About Artist */}
         <section className="py-16 bg-card">
