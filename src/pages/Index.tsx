@@ -92,7 +92,7 @@ const Index = () => {
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 {/* Main featured image */}
                 <div className="absolute top-[5%] left-[10%] w-[65%] aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated rotate-[-3deg] hover:rotate-0 transition-transform duration-500 z-20">
-                  <img src={botanical} alt="Delicate watercolor botanical painting" className="w-full h-full object-cover" />
+                  <img src={stillLife} alt="Watercolor painting of vintage desk with paintbrushes and rose petals" className="w-full h-full object-cover" />
                 </div>
                 {/* Secondary image */}
                 <div className="absolute top-[15%] right-[5%] w-[50%] aspect-[3/4] rounded-2xl overflow-hidden shadow-card rotate-[5deg] hover:rotate-0 transition-transform duration-500 z-10">
