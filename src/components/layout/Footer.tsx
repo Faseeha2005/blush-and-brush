@@ -56,7 +56,7 @@ export function Footer() {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            hello@blushandbrush.com
+            art@blushandbrush.com
           </p>
         </div>
 
