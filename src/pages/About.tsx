@@ -30,6 +30,8 @@ const About = () => {
           title="My Artistic"
           titleAccent="Journey"
           description="Where brushstrokes meet imagination — a curated collection of art born from quiet moments, wild dreams, and the beauty found in everyday wonder."
+          image={landscape}
+          imageAlt="Soft watercolor landscape painting of misty rolling hills at dawn"
         />
 
         {/* About Artist */}
