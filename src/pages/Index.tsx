@@ -87,20 +87,20 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right: Image collage */}
-            <div className="relative hidden lg:block">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
+            {/* Right: Image collage - visible on all screens */}
+            <div className="relative w-full mt-10 lg:mt-0">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto aspect-square">
                 {/* Main featured image */}
-                <div className="absolute top-[5%] left-[10%] w-[65%] aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated rotate-[-3deg] hover:rotate-0 transition-transform duration-500 z-20">
+                <div className="absolute top-[5%] left-[5%] sm:left-[10%] w-[60%] sm:w-[65%] aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated rotate-[-3deg] hover:rotate-0 transition-transform duration-500 z-20">
                   <img src={stillLife} alt="Watercolor painting of vintage desk with paintbrushes and rose petals" className="w-full h-full object-cover" />
                 </div>
                 {/* Secondary image */}
-                <div className="absolute top-[15%] right-[5%] w-[50%] aspect-[3/4] rounded-2xl overflow-hidden shadow-card rotate-[5deg] hover:rotate-0 transition-transform duration-500 z-10">
+                <div className="absolute top-[15%] right-[0%] sm:right-[5%] w-[45%] sm:w-[50%] aspect-[3/4] rounded-2xl overflow-hidden shadow-card rotate-[5deg] hover:rotate-0 transition-transform duration-500 z-10">
                   <img src={botanical} alt="Delicate watercolor botanical painting" className="w-full h-full object-cover" />
                 </div>
                 {/* Decorative circle */}
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center z-40">
-                  <Palette className="w-10 h-10 text-primary" />
+                <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center z-40">
+                  <Palette className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 text-primary" />
                 </div>
               </div>
             </div>
