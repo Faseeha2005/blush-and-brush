@@ -16,6 +16,7 @@ import { Mail, MessageSquare, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { AnimatedSection, PageTransition } from "@/components/animations/AnimatedSection";
+import { PageHero } from "@/components/layout/PageHero";
 
 const artworkTypes = [
   "Custom Illustration",

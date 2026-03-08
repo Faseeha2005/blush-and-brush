@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Brush, Flower2, Monitor, Wand2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection, StaggerContainer, StaggerItem, PageTransition } from "@/components/animations/AnimatedSection";
+import { PageHero } from "@/components/layout/PageHero";
+import { Link } from "react-router-dom";
 
 const services = [
   {

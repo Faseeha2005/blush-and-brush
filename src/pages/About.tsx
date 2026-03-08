@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection, StaggerContainer, StaggerItem, PageTransition } from "@/components/animations/AnimatedSection";
+import { PageHero } from "@/components/layout/PageHero";
 import stillLife from "@/assets/gallery/portrait-1.jpg";
 import landscape from "@/assets/gallery/landscape-1.jpg";
 import botanical from "@/assets/gallery/botanical-1.jpg";
