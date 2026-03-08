@@ -62,7 +62,7 @@ const Contact = () => {
           label="Get in Touch"
           title="Let's Create"
           titleAccent="Together"
-          description="Have a project in mind? I'd love to hear from you. Fill out the form below and let's start bringing your vision to life."
+          description="Every masterpiece begins with a conversation. Share your vision, and together we'll transform it into something truly extraordinary."
         />
 
         <section className="py-24 bg-background">

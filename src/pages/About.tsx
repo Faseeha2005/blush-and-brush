@@ -29,7 +29,7 @@ const About = () => {
           label="Portfolio"
           title="My Artistic"
           titleAccent="Journey"
-          description="A collection of dreams, stories, and emotions captured through art. Each piece tells a unique story waiting to be discovered."
+          description="Where brushstrokes meet imagination — a curated collection of art born from quiet moments, wild dreams, and the beauty found in everyday wonder."
         />
 
         {/* About Artist */}
