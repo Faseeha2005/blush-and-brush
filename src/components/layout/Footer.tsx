@@ -47,7 +47,7 @@ export function Footer() {
               <Twitter className="h-5 w-5" />
             </a>
             <a
-              href="mailto:hello@blushandbrush.com"
+              href="mailto:art@blushandbrush.com"
               className="p-2 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
               aria-label="Email"
             >
