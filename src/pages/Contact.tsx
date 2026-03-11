@@ -193,32 +193,24 @@ const Contact = () => {
                     <p className="text-muted-foreground text-sm">
                       Get notified when new posters are released.
                     </p>
-                    <form
-                       action="https://app.us15.list-manage.com/subscribe/post?u=bd848d62735fe9e1c5781ddf8&id=fcbc93d287&f_id=00e095e1f0"
-                  method="post" target="_blank" className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                  <form
+  action="https://app.us15.list-manage.com/subscribe/post?u=bd848d62735fe9e1c5781ddf8&id=fcbc93d287&f_id=00e095e1f0"
+  method="post"
+  target="_blank"
+  className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
 >
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        toast({
-                          title: "Subscribed! 🎉",
-                          description: "You'll be notified when new art drops!",
-                        });
-                        setSubscribeEmail("");
-                      }}
-                      
-                    >
-                      <Input
-                        type="email"
-                        placeholder="Enter Email"
-                        value={subscribeEmail}
-                        onChange={(e) => setSubscribeEmail(e.target.value)}
-                        required
-                        className="bg-background flex-1"
-                      />
-                      <Button type="submit" className="btn-animate">
-                        Subscribe
-                      </Button>
-                    </form>
+  <Input
+    type="email"
+    name="EMAIL"
+    placeholder="Enter Email"
+    required
+    className="bg-background flex-1"
+  />
+
+  <Button type="submit" className="btn-animate">
+    Subscribe
+  </Button>
+</form>
                   </motion.div>
                 </AnimatedSection>
               </div>
