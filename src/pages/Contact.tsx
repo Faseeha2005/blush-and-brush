@@ -30,6 +30,7 @@ const artworkTypes = [
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [subscribeEmail, setSubscribeEmail] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -178,6 +179,44 @@ const Contact = () => {
                       creating something beautiful together!
                     </p>
                   </motion.form>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="mt-8 bg-card rounded-2xl p-8 shadow-card text-center space-y-4"
+                  >
+                    <h3 className="font-display text-xl font-semibold text-foreground">
+                      Subscribe for Art Updates 🎨
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Get notified when new posters are released.
+                    </p>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        toast({
+                          title: "Subscribed! 🎉",
+                          description: "You'll be notified when new art drops!",
+                        });
+                        setSubscribeEmail("");
+                      }}
+                      className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                    >
+                      <Input
+                        type="email"
+                        placeholder="Enter Email"
+                        value={subscribeEmail}
+                        onChange={(e) => setSubscribeEmail(e.target.value)}
+                        required
+                        className="bg-background flex-1"
+                      />
+                      <Button type="submit" className="btn-animate">
+                        Subscribe
+                      </Button>
+                    </form>
+                  </motion.div>
                 </AnimatedSection>
               </div>
             </div>
