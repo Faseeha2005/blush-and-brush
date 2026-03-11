@@ -194,6 +194,9 @@ const Contact = () => {
                       Get notified when new posters are released.
                     </p>
                     <form
+                       action="https://app.us15.list-manage.com/subscribe/post?u=bd848d62735fe9e1c5781ddf8&id=fcbc93d287&f_id=00e095e1f0"
+                  method="post" target="_blank" className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+>
                       onSubmit={(e) => {
                         e.preventDefault();
                         toast({
@@ -202,7 +205,7 @@ const Contact = () => {
                         });
                         setSubscribeEmail("");
                       }}
-                      className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                      
                     >
                       <Input
                         type="email"
