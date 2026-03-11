@@ -185,7 +185,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-8 bg-card rounded-2xl p-8 shadow-card text-center space-y-4"
+                    className="mt-6 bg-card rounded-2xl p-6 shadow-card text-center space-y-3"
                   >
                     <h3 className="font-display text-xl font-semibold text-foreground">
                       Subscribe for Art Updates 🎨
