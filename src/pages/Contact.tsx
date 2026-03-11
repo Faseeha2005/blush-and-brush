@@ -30,6 +30,7 @@ const artworkTypes = [
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [subscribeEmail, setSubscribeEmail] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
