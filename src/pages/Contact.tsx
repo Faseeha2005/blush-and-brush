@@ -69,8 +69,8 @@ const Contact = () => {
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-                <AnimatedSection direction="left" className="lg:col-span-2 space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                <AnimatedSection direction="left" className="lg:col-span-2 space-y-8 lg:sticky lg:top-24">
                   <div>
                     <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
                       Let's Work Together
@@ -185,7 +185,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-8 bg-card rounded-2xl p-8 shadow-card text-center space-y-4"
+                    className="mt-6 bg-card rounded-2xl p-6 shadow-card text-center space-y-3"
                   >
                     <h3 className="font-display text-xl font-semibold text-foreground">
                       Subscribe for Art Updates 🎨
