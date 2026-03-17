@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blush-and-brush.vercel.app/sitemap.xml
+Sitemap: https://blush-and-brush-studio.vercel.app/sitemap.xml
