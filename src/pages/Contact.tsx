@@ -42,13 +42,47 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast({
-      title: "Message Sent! ✨",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", artworkType: "", message: "" });
-    setIsSubmitting(false);
+
+    try {
+      // Send admin notification
+      await emailjs.send(
+        "service_dvcifsk",
+        "template_45qckdo",
+        {
+          name: formData.name,
+          email: formData.email,
+          artworkType: formData.artworkType,
+          message: formData.message,
+        },
+        "_7Gu1kNsMjK97PzUn"
+      );
+
+      // Send auto-reply to user
+      await emailjs.send(
+        "service_dvcifsk",
+        "template_a5tmzc2",
+        {
+          name: formData.name,
+          email: formData.email,
+          artworkType: formData.artworkType,
+        },
+        "_7Gu1kNsMjK97PzUn"
+      );
+
+      toast({
+        title: "Message Sent! ✨",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", artworkType: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactItems = [
